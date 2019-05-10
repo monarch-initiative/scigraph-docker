@@ -1,7 +1,5 @@
-# SciGraph-docker-monarch-data
-Build scigraph Docker image with the monarch configs. Uses master HEAD from the SciGraph github repo.
-
-Need to have docker installed in order to run the build.
+# scigraph-docker
+Build scigraph docker image with the monarch configs. Uses master HEAD from the SciGraph github repo.
 
 **Generate the monarch config files locally:**
 
