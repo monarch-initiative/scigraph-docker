@@ -1,0 +1,33 @@
+graphConfiguration:
+    location: /data/graph
+    indexedNodeProperties:
+      - label
+      - synonym
+      - category
+    exactNodeProperties:
+      - label
+      - synonym
+    schemaIndexes:
+      Node :
+        - iri
+    neo4jConfig:
+      dump_configuration : true
+      dbms.pagecache.memory : 8G
+
+ontologies:
+  - url: https://archive.monarchinitiative.org/201902/owl/monarch-merged.owl
+    reasonerConfiguration:
+      factory: org.semanticweb.elk.owlapi.ElkReasonerFactory
+      addDirectInferredEdges: true
+      addInferredEquivalences: true
+      removeUnsatisfiableClasses: true
+  - url: https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl
+    reasonerConfiguration:
+      factory: org.semanticweb.elk.owlapi.ElkReasonerFactory
+      addDirectInferredEdges: true
+      addInferredEquivalences: true
+      removeUnsatisfiableClasses: true
+  #- url: https://data.monarchinitiative.org/ttl/ncbigene.ttl
+
+
+MONARCH_GLOBALS

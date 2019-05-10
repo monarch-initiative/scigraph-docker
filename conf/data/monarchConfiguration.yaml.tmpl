@@ -1,0 +1,25 @@
+server:
+  type: simple
+  applicationContextPath: /scigraph
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 9000
+
+applicationContextPath: scigraph
+
+graphConfiguration:
+  location: /data/graph
+  indexedNodeProperties:
+    - label
+  exactNodeProperties:
+    - label
+  neo4jConfig:
+    dump_configuration : true
+    dbms.pagecache.memory : 6g
+    dbms.transaction.timeout: 2m
+
+  curies:
+INJECT_CURIES
+
+INJECT_QUERIES
