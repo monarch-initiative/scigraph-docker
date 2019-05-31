@@ -25,6 +25,8 @@ categories:
     #http://purl.obolibrary.org/obo/GENO_0000525 : effective genotype
     http://purl.obolibrary.org/obo/GENO_0000002 : variant locus
     http://purl.obolibrary.org/obo/SO_0001059 : sequence alteration
+    # lumping two distinct SO classes to simplify our groupings
+    http://purl.obolibrary.org/obo/SO_0001060 : sequence alteration
     http://purl.obolibrary.org/obo/SO_0000110 : sequence feature
     http://purl.obolibrary.org/obo/ECO_0000000 : evidence
     http://purl.obolibrary.org/obo/PW_0000001 : pathway
