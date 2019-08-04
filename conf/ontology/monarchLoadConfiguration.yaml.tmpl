@@ -15,19 +15,17 @@ graphConfiguration:
       dbms.pagecache.memory : 8G
 
 ontologies:
-  - url: https://archive.monarchinitiative.org/201907/owl/monarch-merged.owl
+  - url: https://archive.monarchinitiative.org/201908/owl/monarch-merged.owl
     reasonerConfiguration:
       factory: org.semanticweb.elk.owlapi.ElkReasonerFactory
       addDirectInferredEdges: true
       addInferredEquivalences: true
       removeUnsatisfiableClasses: true
-  - url: https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl
+  - url: https://archive.monarchinitiative.org/201908/owl/geno.owl
     reasonerConfiguration:
       factory: org.semanticweb.elk.owlapi.ElkReasonerFactory
       addDirectInferredEdges: true
       addInferredEquivalences: true
       removeUnsatisfiableClasses: true
-  #- url: https://data.monarchinitiative.org/ttl/ncbigene.ttl
-
 
 MONARCH_GLOBALS
