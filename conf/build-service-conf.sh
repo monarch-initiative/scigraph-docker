@@ -9,7 +9,7 @@ else
 fi
 
 if [ -z "$2" ]; then
-    CURIE_MAP='https://archive.monarchinitiative.org/201910/translationtable/curie_map.yaml'
+    CURIE_MAP='https://archive.monarchinitiative.org/201911/translationtable/curie_map.yaml'
 else
     CURIE_MAP=$2
 fi
