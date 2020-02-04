@@ -15,13 +15,13 @@ graphConfiguration:
       dbms.pagecache.memory : 8G
 
 ontologies:
-  - url: https://archive.monarchinitiative.org/201911/owl/monarch-merged.owl
+  - url: /data/owl/monarch-merged.owl
     reasonerConfiguration:
       factory: org.semanticweb.elk.owlapi.ElkReasonerFactory
       addDirectInferredEdges: true
       addInferredEquivalences: true
       removeUnsatisfiableClasses: true
-  - url: https://archive.monarchinitiative.org/201911/owl/geno.owl
+  - url: /data/owl/geno.owl
     reasonerConfiguration:
       factory: org.semanticweb.elk.owlapi.ElkReasonerFactory
       addDirectInferredEdges: true
