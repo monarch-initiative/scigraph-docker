@@ -3,6 +3,8 @@ FROM maven:3.6.0-jdk-8-slim
 VOLUME /data
 WORKDIR /scigraph
 
+RUN adduser --disabled-password --uid 1006 monarch
+
 RUN apt-get -y update && apt-get install -y git xvfb libxrender1 libxi6 libxtst6
 
 # Avoid java.awt.AWTError: Assistive Technology not found: org.GNOME.Accessibility.AtkWrapper
@@ -21,5 +23,7 @@ RUN mkdir -p /scigraph/conf
 RUN cd /scigraph && mvn install -DskipTests -DskipITs
 
 ENV PATH="/scigraph/scripts/:$PATH"
+
+USER monarch
 
 ENTRYPOINT ["/bin/sh"]
