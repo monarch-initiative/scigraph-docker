@@ -2,7 +2,7 @@ FROM maven:3.6.0-jdk-8-slim
 
 VOLUME /data
 
-RUN adduser --disabled-password --uid 1006 monarch
+#RUN adduser --disabled-password --uid 1006 monarch
 
 RUN apt-get -y update && apt-get install -y git xvfb libxrender1 libxi6 libxtst6
 
@@ -11,9 +11,9 @@ RUN apt-get -y update && apt-get install -y git xvfb libxrender1 libxi6 libxtst6
 RUN sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-8-openjdk/accessibility.properties
 
 WORKDIR /scigraph
-RUN chown monarch:monarch /scigraph
+#RUN chown monarch:monarch /scigraph
 
-USER monarch
+#USER monarch
 
 ENV MAVEN_CONFIG "$WORKDIR/.m2"
 
