@@ -10,8 +10,11 @@ RUN apt-get -y update && apt-get install -y git xvfb libxrender1 libxi6 libxtst6
 # https://askubuntu.com/a/723503
 RUN sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-8-openjdk/accessibility.properties
 
-USER monarch
 WORKDIR /scigraph
+RUN chown monarch:monarch /scigraph
+
+USER monarch
+
 ENV MAVEN_CONFIG "$WORKDIR/.m2"
 
 # Clone and build
