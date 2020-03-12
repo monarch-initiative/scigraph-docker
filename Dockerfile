@@ -2,7 +2,7 @@ FROM maven:3.6.0-jdk-8-slim
 
 VOLUME /data
 
-ENV SCIGRAPH_UID="1006"
+ARG SCIGRAPH_UID="1006"
 
 RUN adduser --disabled-password --uid "$SCIGRAPH_UID" scigraph
 
