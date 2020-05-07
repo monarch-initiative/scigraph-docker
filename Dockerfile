@@ -10,8 +10,6 @@ RUN sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-8-openjdk/accessibili
 
 WORKDIR /scigraph
 
-ENV MAVEN_CONFIG "$WORKDIR/.m2"
-
 # Clone and build
 RUN git clone https://github.com/SciGraph/SciGraph.git /scigraph
 
