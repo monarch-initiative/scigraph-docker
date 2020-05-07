@@ -23,7 +23,7 @@ RUN mkdir -p /scigraph/conf
 # Build scigraph
 RUN cd /scigraph && mvn install -DskipTests -DskipITs
 
-RUN chown -R 755 /scigraph
+RUN chmod -R 755 /scigraph
 
 ENV PATH="/scigraph/scripts/:$PATH"
 
