@@ -96,7 +96,7 @@ mappedProperties:
     - http://purl.org/dc/terms/creator
   - name: downloadURL
     properties:
-    - http://purl.org/dc/terms/downloadURL
+    - http://www.w3.org/ns/dcat#downloadURL
   - name: format
     properties:
     - http://purl.org/dc/terms/format
